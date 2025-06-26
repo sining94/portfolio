@@ -1,0 +1,56 @@
+@import './reset';
+@import './variables';
+@import './mixins';
+
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --accent: #007bff;
+  --fff: #ffffff;
+  --000: #000000;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  scroll-behavior: smooth;
+
+  &.dark {
+    --bg: #121212;
+    --text: #f0f0f0;
+    --accent: #90caf9;
+    background: var(--bg);
+    color: var(--text);
+
+    .header .nav .nav-links li button {
+      color: var(--text);
+    }
+
+    // projects컴포넌트 slick slider 도트
+    li button:before {
+      color: #bbb;
+      opacity: 1;
+    }
+    li.slick-active button:before {
+      color: #fff;
+      opacity: 1;
+    }
+  }
+}
+
+.fp-watermark {
+  display: none !important;
+}
+
+.fp-overflow {
+  overflow: hidden !important;
+}
+
+.projects-section .fp-overflow {
+  overflow: visible !important;
+  max-height: none !important;
+}
+.fp-overflow::-webkit-scrollbar {
+  display: none;
+}

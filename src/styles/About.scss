@@ -1,0 +1,50 @@
+.about {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/images/img_para_01.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    opacity: 0.3;
+    z-index: 0;
+  }
+
+  .about-content {
+    position: relative;
+    max-width: 800px;
+    text-align: center;
+    z-index: 1;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+
+      @media (max-width: 768px) {
+        padding: 0 10px;
+      }
+    }
+  }
+}

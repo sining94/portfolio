@@ -1,0 +1,21 @@
+@import './styles/variables';
+@import './styles/global';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#fullpage-wrapper {
+  font-family: sans-serif;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}

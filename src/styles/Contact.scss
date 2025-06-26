@@ -1,0 +1,115 @@
+.contact-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background: var(--bg-color);
+  color: var(--text-color);
+  position: relative;
+
+  .contact-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/images/img_contact.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+    opacity: 0.3;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    z-index: 1;
+  }
+
+  .message {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: var(--text-muted);
+    z-index: 1;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    z-index: 1;
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1rem;
+
+      a {
+        color: var(--text-color);
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      button {
+        background: #3b82f6;
+        color: white;
+        border: none;
+        padding: 4px 10px;
+        font-size: 0.8rem;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background: #2563eb;
+        }
+      }
+    }
+  }
+
+  .toast {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #3b82f6;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    animation: fadeOut 2s forwards;
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f3f4f6;
+  --text-muted: #9ca3af;
+}
+body:not(.dark) {
+  --bg-color: #f9f9f9;
+  --text-color: #1f2937;
+  --text-muted: #6b7280;
+}
