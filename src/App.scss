@@ -14,7 +14,7 @@ body {
 }
 
 .section {
-  display: flex;
+  display: flex !important;
   align-items: center !important;
   justify-content: center;
   height: 100dvh !important;
