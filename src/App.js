@@ -27,12 +27,20 @@ function App() {
   }, [isDark]);
 
   const toggleTheme = () => {
-    setIsDark(prev => !prev);
+    setIsDark((prev) => !prev);
   };
   return (
     <>
       <Header isDark={isDark} toggleTheme={toggleTheme} />
       <ReactFullpage
+        scrollingSpeed={1000}
+        touchSensitivity={15}
+        bigSectionsDestination={null}
+        fitToSection={true}
+        scrollOverflow={false}
+        autoScrolling={true}
+        responsiveWidth={0}
+        licenseKey={''}
         render={() => (
           <>
             <div id="fullpage-wrapper">
